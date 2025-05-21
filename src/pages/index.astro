@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+---
+<MainLayout title="Astro, Tailwind, Alpine, Motion One og Animate CSS Starter">
+	<article class="prose" x-data>
+		<h1>Astro, Tailwind, Alpine, Motion One og Animate CSS</h1>
+		<p>Dette lille site er lavet med små kodestumper, der viser de forskellige frontend frameworks, vi skal bruge i løbet af valgfaget.</p>
+		<p>Se også:</p>
+		<ul>
+			<li>
+				<Link href="https://astro.build/" target="_blank">Astro<Link>
+			<li>
+				<Link href="https://tailwindcss.com/" target="_blank">Tailwind<Link>
+				
+			<li>
+				<Link href="https://alpinejs.dev/" target="_blank">Alpine.js<Link>
+			<li>
+				<Link href="https://motion.dev/" target="_blank">Motion One<Link>
+			<li>
+				<Link href="https://animate.style/" target="_blank">Animate CSS<Link>
+		</ul>
+
+		<h2>Når du skal starte et nyt projekt op</h2>
+
+		<p>Når du skal starte et nyt projekt op, skal du bruge starter-templaten fra <Link href="https://github.com/stefangrage/did-e24-starter" target="_blank">github.com/stefangrage/did-e24-starter</Link></p>
+
+		<p>Starter templaten indeholder en fil/mappestruktur, et par komponeneter, et layout og en side, og alle de frontend frameworks, vi arbejder med i løbet af semestret.</p>
+
+		<p>
+			Start med at clone repo'et og installere alt det nødvendige ved at skrive <span class="italic font-bold">"npm i"</span> i terminalen. Kør sitet ved at skrive <span class="italic font-bold">"npm run dev"</span> i terminalen.
+		</p>
+		<p>
+			Tilpas derefter indholdet i "pages, layouts, components og assets...
+		</p>
+		<p>
+			Og vigtigst af alt: Lav noget godt:-)
+		</p>
+		<h2>Inspiration</h2>
+		<p>
+			Du kan downloade det her lille eksempelsite fra <Link href="https://github.com/stefangrage/did-e24-starter-med-ff-eksempler" target="_blank">github</Link>, og køre det lokalt. Forhåbenltligt ligner og fungerer det som <Link href="https://candid-dodol-055c6d.netlify.app/">online-udgaven på Netlify</Link>.
+		</p>
+		<p>
+			Se også <Link href="http://motherfuckingwebsite.com/" target="_blank">dette lille site</a> for lidt inspiration.
+		</p>
+		<div>
+		<Button>Fang mig hvis du kan:-)</Button>
+		</div>
+	</article>
+</MainLayout>
+<style>
+	ul>li:hover{
+		animation: headShake; /* referring directly to the animation's @keyframe declaration */
+  		animation-duration: 1s; /* don't forget to set a duration! */
+	}
+</style>
