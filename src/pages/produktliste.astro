@@ -1,0 +1,37 @@
+---
+//ts-nocheck
+
+import { apiDetails } from "../settings";
+
+
+const res = await fetch(`${apiDetails.supabaseUrl}/rest/v1/products?select=*`, {
+  headers: {
+    apikey: apiDetails.supabaseAnonKey,
+    Authorization: `Bearer ${apiDetails.supabaseAnonKey}`,
+  },
+  
+});
+const [data] = await res.json();
+console.log("Supabase URL:", apiDetails.supabaseUrl);
+console.log("Supabase anonKey:", apiDetails.supabaseAnonKey);
+
+
+import Card from "../components/ProductsCard.astro"
+---
+
+
+<main>
+  <div class="flex flex-wrap md:gap-s md:m-xl  justify-evenly ">
+ {[data].map((product) => <Card {product} /> )}
+</div>
+</main>
+
+
+<style>
+
+  .stickynav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+</style>
